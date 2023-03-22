@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geofence Map</title>
+</head>
+<body onload= "InitMap()">
+    <center><h2>Draw, edit, delete and get geofence polygon coordinates using google map-api, javascript</h2></center>
+
+
+    <CENTer><div id="map-canvas" style="height: 600px; width: 1400px;"></div></CENTer>
+     
+    <!-- to get the updated coordinates -->
+    <div id="info" style="position: absolute; color: red; font-family: Arial, Helvetica, sans-serif; height: 200px; font-size: 12px;"></div> 
+    <!-- no LINK FOR AN API KEY SO I USED A BASIC, NON INTERACTIVE-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXX5DawIhBUTaMCMIhLzZk1UjMsd4KGn8&libraries=drawing"></script>
+    <script src="map.js"></script>
+    <a href="javascript:void(0);" onclick="printPageArea('printableArea')">Print</a>
+
+    <h3>EMERGENCY CONTACTS</h3>
+    
+    <a href="contacts.html" class="next">CONTACTS &raquo;</a>
+</body>
+</html>
