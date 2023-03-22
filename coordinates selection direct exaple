@@ -1,0 +1,69 @@
+<---nilikua nataka kitu inarefer to database but nikaona ni tricky so nikatafuta hii source code juu ni straight foward na hitumii database kama naezasaidika it will be okay and ill owe you one--->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Item Selector</title>
+</head>
+<body>
+  <h1>Item Selector</h1>
+  
+  <label for="items">Select your location:</label>
+  <select id="items" name="items">
+    <option value="Machakos Country Bus: -1.5112, 37.2632"> Machakos Country Bus: -1.5112, 37.2632</option>
+    <option value="ABC Place (Waiyaki Way): -1.2583 , 36.8005"> ABC Place (Waiyaki Way): -1.2583 , 36.8005</option>
+    <option value="Globe Roundabout (Nairobi CBD): -1.2848 , 36.8215"> Globe Roundabout (Nairobi CBD): -1.2848 , 36.8215</option>
+    <option value="Mathare: 1.2494 , 36.8946"> Mathare: 1.2494 , 36.8946</option>
+    <option value="Kenya National Archives"> Kenya National Archives: 1.2848 , 36.8252</option>
+    <option value="Muthaiga: -1.2386 , 36.8266"> Muthaiga: -1.2386 , 36.8266</option>
+    <option value="Runda: -1.2209 , 36.8254"> Runda: -1.2209 , 36.8254</option>
+    <option value="Kililmani: -1.2967 , 36.7847"> Kililmani: -1.2967 , 36.7847</option>
+    <option value="Lavington: -1.2762 , 36.7781"> Lavington: -1.2762 , 36.7781</option>
+    <option value="Karen: -1.3209 , 36.7084"> Karen: -1.3209 , 36.7084</option>
+    
+
+
+
+  </select>
+  
+  <button onclick="generateMessage()">Generate Message</button>
+  
+  <p id="message"></p>
+  
+  <script>
+    function generateMessage() {
+      const selectedItem = document.getElementById("items").value;
+      let message;
+      
+      switch (selectedItem) {
+    case "Machakos Country Bus: -1.5112, 37.2632":
+    
+    message = "1. Avoid walking alone at night, especially in poorly lit areas or isolated streets";
+    message += "\n2. Be cautious of pickpockets and keep your valuables close to you at all times, especially in crowded areas like markets and public transportation.";
+    message += "\n3. Use only licensed and reputable taxi services, and avoid hailing taxis on the street.";
+    message += "\n4. Be cautious while using ATMs and try to use them during daylight hours, or in well-lit and crowded areas.";
+    message += "\n5. Be careful while crossing the roads and use designated pedestrian crossings.";
+    message += "\n6. Avoid displaying expensive jewelry, electronics, or other valuables in public.";
+    message += "\n7. Be aware of your surroundings and try to stay in busy and well-lit areas.";
+    message += "\n8. Keep your doors and windows locked at all times, especially when you're not at home.";
+    message += "\n9. Be cautious of scams and avoid giving out personal information to strangers.";
+    break;
+  default:
+    message = "No safety tips available for this location.";
+    break;
+}
+        case "":
+          message = "";
+          break;
+        case "":
+          message = "";
+          break;
+        default:
+          message = "Please select an your location.";
+      }
+      
+      document.getElementById("message").textContent = message;
+    }
+  </script>
+</body>
+</html>
